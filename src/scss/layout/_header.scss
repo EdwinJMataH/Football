@@ -1,0 +1,90 @@
+@use 'base/variables' as var;
+
+header {
+    background-color: var.$black;
+
+    h1 {
+        text-transform: uppercase;
+        color: var.$red;
+        font-weight: 600;
+        font-size: 4rem;
+
+        span {
+            color: var.$white;
+        }
+    }
+
+    .container__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 8rem;
+
+        .logo {
+            flex: 1;
+        }
+
+    }
+}
+
+.navegation {
+    flex: 3;
+
+    .navegation__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .navegation__item {
+            position: relative;
+
+            &:hover {
+
+                .dropdown {
+                    // transform: translate(0,0);
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
+        }
+
+        .navegation__item a{
+            color: var.$white;
+            padding: 3rem 2.8rem;
+            text-transform: uppercase;
+            font-family: var.$font_title;
+            font-weight: 600;
+            font-size: 1.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: .5s;
+
+            i {
+                margin-left: 1rem;
+            }
+
+            &:hover {
+                background-color: var.$red;
+
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+.dropdown {
+    position: absolute;
+    background-color: var.$black;
+    top: 100%;
+    left: 0;
+    transition: 0.8s;
+    opacity: 0;
+    pointer-events: none;
+
+    ul {
+        padding: 0;
+    }
+}

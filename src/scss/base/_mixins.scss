@@ -4,7 +4,7 @@
     @media (min-width: var.$phone) {
         @content;
     }
-}e
+}
 
 @mixin tablet {
     @media (min-width: v.$tablet) {

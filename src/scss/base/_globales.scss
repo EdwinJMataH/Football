@@ -3,6 +3,8 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    padding: 0;
+    margin: 0;
 }
 
 *,
@@ -25,13 +27,21 @@ a {
     text-decoration: none;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: var.$font_title;
+}
+
 img {
     width: 100%;
     display: block;
 }
 
+ul li {
+    list-style: none;
+}
+
 .container {
-    width: 95%;
+    width: 85%;
     max-width: 120rem;
     margin: 0 auto;
 }
