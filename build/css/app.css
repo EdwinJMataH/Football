@@ -323,6 +323,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
+  background-color: #F5F5F5;
 }
 
 p {
@@ -336,11 +337,16 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", sans-serif;
+  margin: 0;
 }
 
 img {
   width: 100%;
   display: block;
+}
+
+ul {
+  padding: 0;
 }
 
 ul li {
@@ -353,8 +359,18 @@ ul li {
   margin: 0 auto;
 }
 
+.btn {
+  display: block;
+  padding: 1rem;
+  background-color: #E90E16;
+  border-radius: 0.5rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
 .top {
-  background-color: #FFFFFF;
+  background-color: #F5F5F5;
   padding: 2rem 0;
 }
 
@@ -408,6 +424,9 @@ header h1 {
   color: #E90E16;
   font-weight: 600;
   font-size: 4rem;
+}
+header h1 :nth-child(1) {
+  color: #008000;
 }
 header h1 span {
   color: #FFFFFF;
@@ -470,4 +489,191 @@ header .container__header .logo {
 }
 .dropdown ul {
   padding: 0;
+}
+
+.image img {
+  max-height: 50rem;
+}
+
+.container__main {
+  margin-top: 2rem;
+}
+
+.container__section {
+  display: grid;
+  grid-template-columns: 22% 58% 20%;
+  gap: 2rem;
+}
+
+.sidebar .information {
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.sidebar .information .information__title {
+  border-bottom: 0.2rem solid #212529;
+  margin-bottom: 1rem;
+}
+.sidebar .information .information__title h2 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+.sidebar .information .information__content {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 0.5rem;
+  border-bottom: 0.2rem solid #F5F5F5;
+}
+.sidebar .information .information__content img {
+  height: 3rem;
+  width: 3rem;
+}
+.sidebar .information .information__content a {
+  color: #212529;
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+}
+.sidebar .information .information_fun__content {
+  border-bottom: 0.2rem solid #F5F5F5;
+  padding: 1rem 0;
+}
+.sidebar .information .information_fun__content h4 {
+  color: #212529;
+}
+.sidebar .information .information_fun__content img {
+  border-radius: 0.5rem;
+  padding-bottom: 0.3rem;
+}
+
+.sidebar__central .news__central {
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.sidebar__central .central__tittle {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.sidebar__central .central__tittle img {
+  height: 4rem;
+  width: 4rem;
+}
+.sidebar__central .central__tittle h4 {
+  margin-bottom: 0.5rem;
+}
+.sidebar__central .central__information .central__image {
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+}
+.sidebar__central .central__information .central__image img {
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  height: 100%;
+}
+.sidebar__central .central__information .central__content {
+  padding: 0 1rem;
+  border-left: 0.2rem solid #F5F5F5;
+  border-bottom: 0.2rem solid #F5F5F5;
+  border-right: 0.2rem solid #F5F5F5;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.sidebar__central .central__information .central__content h3 {
+  color: #212529;
+  padding-top: 0.5rem;
+}
+.sidebar__central .central__information .central__content p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.container__information {
+  background-color: #212529;
+}
+.container__information h2, .container__information p, .container__information i, .container__information a {
+  color: #FFFFFF;
+}
+.container__information h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.container__information p {
+  font-size: 1.8rem;
+}
+.container__information .information {
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
+.container__information .information .container__contact__links {
+  display: flex;
+  gap: 15rem;
+  padding: 5rem 0 8rem;
+}
+.container__information .information .contact__social {
+  margin-top: 2rem;
+}
+.container__information .information .contact__social a:hover {
+  background-color: #212529;
+  border-color: #FFFFFF;
+}
+.container__information .information .container__links a:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105";
+  padding-right: 0.5rem;
+}
+.container__information .information .container__links a:hover {
+  color: #E90E16;
+}
+.container__information .information .container__links a:hover:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f101";
+}
+.container__information .information .container__links .contact__item {
+  padding-left: 2rem;
+}
+.container__information .information .container__subscribe {
+  background-color: #E90E16;
+  padding: 10rem 3rem 5rem;
+}
+.container__information .information .container__subscribe h2, .container__information .information .container__subscribe p {
+  padding-left: 2rem;
+}
+.container__information .information .container__subscribe p {
+  margin-bottom: 5rem;
+}
+.container__information .information .container__subscribe input[type=text] {
+  background-color: #F5F5F5;
+  padding: 1.2rem 0 1.2rem 1.2rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  border-color: #E90E16;
+  border-right: 0;
+  width: 100%;
+}
+.container__information .information .container__subscribe input[type=submit] {
+  background-color: #212529;
+  color: #FFFFFF;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border-color: #E90E16;
+  border-left: 0;
+}
+.container__information .information .container__subscribe .input__group {
+  display: flex;
+  align-items: stretch;
+}
+
+.container__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.container__footer p {
+  font-size: 1.6rem;
+}
+.container__footer p a, .container__footer p span {
+  color: #E90E16;
+  font-weight: 700;
 }

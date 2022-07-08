@@ -9,6 +9,10 @@ header {
         font-weight: 600;
         font-size: 4rem;
 
+        :nth-child(1) {
+            color: var.$green;
+        }
+
         span {
             color: var.$white;
         }
@@ -86,5 +90,11 @@ header {
 
     ul {
         padding: 0;
+    }
+}
+
+.image {
+    img {
+        max-height: 50rem;
     }
 }

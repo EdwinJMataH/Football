@@ -16,6 +16,7 @@ html {
 body {
     font-family: var.$font;
     font-size: 16px;
+    background-color: var.$gray;
 }
 
 p {
@@ -29,11 +30,18 @@ a {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: var.$font_title;
+    margin: 0;
 }
 
 img {
+    // max-width: 100%;
     width: 100%;
+    // height: auto;
     display: block;
+}
+
+ul {
+    padding: 0;
 }
 
 ul li {
@@ -44,4 +52,16 @@ ul li {
     width: 85%;
     max-width: 120rem;
     margin: 0 auto;
+}
+
+//Buttons
+
+.btn {
+    display: block;
+    padding: 1rem;
+    background-color: var.$red;
+    border-radius: .5rem;
+    color: var.$white;
+    font-size: 1.8rem;
+    text-align:center;
 }

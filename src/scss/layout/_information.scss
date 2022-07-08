@@ -1,0 +1,102 @@
+@use 'base/variables' as var;
+
+.container__information {
+    background-color: var.$black;
+
+    h2, p, i, a {
+        color: var.$white;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+
+    .information {
+
+        display: grid;
+        grid-template-columns: 65% 35%;
+        // padding: 5rem 0 6rem;
+
+        .container__contact__links {
+            display: flex;
+            gap: 15rem;
+            padding: 5rem 0 8rem;
+        }
+
+        .contact__social {
+            margin-top: 2rem;
+            a {
+
+                &:hover {
+                    background-color: var.$black;
+                    border-color: var.$white;
+                }
+            }
+        }
+        .container__links {
+
+            a {
+                &:before {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    content: "\f105";
+                    padding-right: .5rem;
+                }
+
+                &:hover {
+                    color: var.$red;
+                }
+
+                &:hover:before{
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    content: "\f101";
+                }
+            }
+            
+            .contact__item {
+                padding-left: 2rem;
+            }
+        }
+
+        .container__subscribe {
+            background-color: var.$red;
+            padding: 10rem 3rem 5rem;
+
+            h2, p {
+                padding-left: 2rem;
+            }
+
+            p {
+                margin-bottom: 5rem;
+            }
+
+            input[type="text"] {
+                background-color: var.$gray;
+                padding: 1.2rem 0 1.2rem 1.2rem;
+                border-radius: 0.5rem 0 0 0.5rem;
+                border-color: var.$red;
+                border-right: 0;
+                width: 100%;
+            }
+
+            input[type="submit"] {
+                background-color: var.$black;
+                color: var.$white;
+                border-radius: 0 0.5rem 0.5rem 0;
+                border-color: var.$red;
+                border-left: 0;
+            }
+
+            .input__group {
+                display: flex;
+                align-items: stretch;
+            }
+        }
+    }
+}

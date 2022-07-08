@@ -1,0 +1,16 @@
+@use 'base/variables' as var;
+
+.container__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    p {
+        font-size: 1.6rem;
+
+        a, span {
+            color: var.$red;
+            font-weight: 700;
+        }
+    }
+}
