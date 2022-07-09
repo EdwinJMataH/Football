@@ -499,7 +499,7 @@ header .container__header .logo {
   margin-top: 2rem;
 }
 
-.container__section {
+.container__news {
   display: grid;
   grid-template-columns: 22% 58% 20%;
   gap: 2rem;
@@ -580,13 +580,13 @@ header .container__header .logo {
   border-right: 0.2rem solid #F5F5F5;
   border-radius: 0 0 0.5rem 0.5rem;
 }
-.sidebar__central .central__information .central__content h3 {
+.sidebar__central .central__information .central__content h2 {
   color: #212529;
   padding-top: 0.5rem;
 }
 .sidebar__central .central__information .central__content p {
-  font-size: 1.6rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 
 .container__information {
@@ -676,4 +676,70 @@ header .container__header .logo {
 .container__footer p a, .container__footer p span {
   color: #E90E16;
   font-weight: 700;
+}
+
+.section__teams {
+  display: grid;
+  grid-template-columns: 78% 22%;
+  gap: 3rem;
+}
+
+.second__header {
+  background-color: #FFFFFF;
+  padding: 3rem 0;
+}
+.second__header .container__name {
+  padding: 3rem 0;
+  position: relative;
+}
+.second__header .container__name h1 {
+  font-size: 4rem;
+}
+.second__header .container__name:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 0.5rem;
+  width: 10rem;
+  background-color: #008000;
+}
+.second__header .container__name:before {
+  position: absolute;
+  top: 0;
+  left: 12rem;
+  content: "";
+  height: 0.5rem;
+  width: 10rem;
+  background-color: #E90E16;
+}
+
+.container__teams {
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 0.5rem 1rem;
+  border-bottom: 0.2rem solid #F5F5F5;
+}
+.team img {
+  height: 4rem;
+  width: 4rem;
+}
+.team a {
+  color: #212529;
+  font-size: 1.8rem;
+  padding-left: 2rem;
+  font-weight: 500;
+}
+.team a:hover {
+  color: #E90E16;
 }
