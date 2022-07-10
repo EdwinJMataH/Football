@@ -1,0 +1,7 @@
+@use 'base/variables' as var;
+
+.section__team {
+    display: grid;
+    grid-template-columns: 22% 53% 23%;
+    gap: 2rem;
+}

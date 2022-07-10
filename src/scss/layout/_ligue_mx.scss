@@ -1,0 +1,105 @@
+@use 'base/variables' as var;
+
+.section__ligue_mx {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 3rem;
+}
+
+.information__content {
+
+    table {
+        font-size: 1.2rem;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+
+        td {
+            padding: 1rem ;
+
+            a {
+                padding-left: 0!important;
+
+                &:hover {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        thead {
+
+            tr {
+                border-bottom: .2rem solid var.$black;
+            }
+
+            th {
+                padding-bottom: 1rem;
+            }
+        }
+
+        tbody {
+
+            td:nth-child(2) {
+                text-align: left;
+            }
+
+            tr {
+                border-bottom: .2rem solid var.$gray;
+            }
+
+            tr:nth-child(1),
+            tr:nth-child(2),
+            tr:nth-child(3),
+            tr:nth-child(4) {
+                border-left: .4rem solid var.$blue;
+            }
+
+            tr:nth-child(5),
+            tr:nth-child(6),
+            tr:nth-child(7),
+            tr:nth-child(8),
+            tr:nth-child(9),
+            tr:nth-child(10),
+            tr:nth-child(11),
+            tr:nth-child(12) {
+                border-left: .4rem solid var.$orange;
+            }
+
+            tr:last-child {
+                border-bottom: 0rem;
+            }
+        }
+
+    }
+}
+
+.symbology {
+    width: 100%;
+    font-weight: 500;
+    padding-top: 1rem;
+
+    .symbology__item {
+        position: relative;
+        
+        &:before {
+            position: absolute;
+            content: "";
+            background-color: var.$blue;
+            width: 1rem;
+            height: 1rem;
+            top: 0; 
+            left: 0;
+        }
+
+        &:last-child:before {
+            background-color: var.$orange;
+        }
+    }
+
+    p {
+        margin-top: 0;
+        font-size: 1.2rem;
+        padding-left: 2rem;
+    }
+}

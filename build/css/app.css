@@ -486,6 +486,7 @@ header .container__header .logo {
   transition: 0.8s;
   opacity: 0;
   pointer-events: none;
+  z-index: 10;
 }
 .dropdown ul {
   padding: 0;
@@ -501,7 +502,7 @@ header .container__header .logo {
 
 .container__news {
   display: grid;
-  grid-template-columns: 22% 58% 20%;
+  grid-template-columns: 22% 55% 23%;
   gap: 2rem;
 }
 
@@ -515,8 +516,10 @@ header .container__header .logo {
   border-bottom: 0.2rem solid #212529;
   margin-bottom: 1rem;
 }
-.sidebar .information .information__title h2 {
+.sidebar .information .information__title h2, .sidebar .information .information__title h4 {
   margin-bottom: 1rem;
+}
+.sidebar .information .information__title h2 {
   font-size: 3rem;
 }
 .sidebar .information .information__content {
@@ -531,7 +534,6 @@ header .container__header .logo {
 }
 .sidebar .information .information__content a {
   color: #212529;
-  font-size: 1.5rem;
   padding-left: 0.5rem;
 }
 .sidebar .information .information_fun__content {
@@ -678,12 +680,6 @@ header .container__header .logo {
   font-weight: 700;
 }
 
-.section__teams {
-  display: grid;
-  grid-template-columns: 78% 22%;
-  gap: 3rem;
-}
-
 .second__header {
   background-color: #FFFFFF;
   padding: 3rem 0;
@@ -691,6 +687,12 @@ header .container__header .logo {
 .second__header .container__name {
   padding: 3rem 0;
   position: relative;
+  display: flex;
+}
+.second__header .container__name img {
+  height: 5rem;
+  width: 5rem;
+  margin-right: 1.5rem;
 }
 .second__header .container__name h1 {
   font-size: 4rem;
@@ -703,6 +705,7 @@ header .container__header .logo {
   height: 0.5rem;
   width: 10rem;
   background-color: #008000;
+  z-index: 1;
 }
 .second__header .container__name:before {
   position: absolute;
@@ -712,6 +715,13 @@ header .container__header .logo {
   height: 0.5rem;
   width: 10rem;
   background-color: #E90E16;
+  z-index: 1;
+}
+
+.section__teams {
+  display: grid;
+  grid-template-columns: 78% 22%;
+  gap: 3rem;
 }
 
 .container__teams {
@@ -742,4 +752,90 @@ header .container__header .logo {
 }
 .team a:hover {
   color: #E90E16;
+}
+
+.section__ligue_mx {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 3rem;
+}
+
+.information__content table {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+.information__content table td {
+  padding: 1rem;
+}
+.information__content table td a {
+  padding-left: 0 !important;
+}
+.information__content table td a:hover {
+  font-weight: 700;
+}
+.information__content table thead tr {
+  border-bottom: 0.2rem solid #212529;
+}
+.information__content table thead th {
+  padding-bottom: 1rem;
+}
+.information__content table tbody td:nth-child(2) {
+  text-align: left;
+}
+.information__content table tbody tr {
+  border-bottom: 0.2rem solid #F5F5F5;
+}
+.information__content table tbody tr:nth-child(1),
+.information__content table tbody tr:nth-child(2),
+.information__content table tbody tr:nth-child(3),
+.information__content table tbody tr:nth-child(4) {
+  border-left: 0.4rem solid #4285F4;
+}
+.information__content table tbody tr:nth-child(5),
+.information__content table tbody tr:nth-child(6),
+.information__content table tbody tr:nth-child(7),
+.information__content table tbody tr:nth-child(8),
+.information__content table tbody tr:nth-child(9),
+.information__content table tbody tr:nth-child(10),
+.information__content table tbody tr:nth-child(11),
+.information__content table tbody tr:nth-child(12) {
+  border-left: 0.4rem solid #FA7B17;
+}
+.information__content table tbody tr:last-child {
+  border-bottom: 0rem;
+}
+
+.symbology {
+  width: 100%;
+  font-weight: 500;
+  padding-top: 1rem;
+}
+.symbology .symbology__item {
+  position: relative;
+}
+.symbology .symbology__item:before {
+  position: absolute;
+  content: "";
+  background-color: #4285F4;
+  width: 1rem;
+  height: 1rem;
+  top: 0;
+  left: 0;
+}
+.symbology .symbology__item:last-child:before {
+  background-color: #FA7B17;
+}
+.symbology p {
+  margin-top: 0;
+  font-size: 1.2rem;
+  padding-left: 2rem;
+}
+
+.section__team {
+  display: grid;
+  grid-template-columns: 22% 53% 23%;
+  gap: 2rem;
 }

@@ -4,45 +4,7 @@
     display: grid;
     grid-template-columns: 78% 22%;
     gap: 3rem;
-
 }
-.second__header {
-    background-color: var.$white;
-    padding: 3rem 0;
-
-
-    .container__name {
-        padding: 3rem 0;
-        position: relative;
-
-        h1 {
-            font-size: 4rem;
-            // padding-left: 1.5rem;
-        }
-
-        &:after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "";
-            height: .5rem;
-            width: 10rem;
-            background-color: var.$green;
-        }
-
-        &:before {
-            position: absolute;
-            top: 0;
-            left: 12rem;
-            content: "";
-            height: .5rem;
-            width: 10rem;
-            background-color: var.$red;
-        }
-    }
-}
-
-
 
 .container__teams {
     border-radius: 1rem;
@@ -53,7 +15,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
-
 
 .team {
     display: flex;

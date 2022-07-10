@@ -8,7 +8,7 @@
 
 .container__news {
     display: grid;
-    grid-template-columns: 22% 58% 20%;
+    grid-template-columns: 22% 55% 23%;
     gap: 2rem;
 
 }
@@ -25,8 +25,11 @@
             border-bottom: .2rem solid var.$black;
             margin-bottom: 1rem;
 
-            h2 {
+            h2, h4{
                 margin-bottom: 1rem;
+            }
+
+            h2 {
                 font-size: 3rem;
             }
         }
@@ -43,7 +46,7 @@
 
             a {
                 color: var.$black;
-                font-size: 1.5rem;
+                // font-size: 1.5rem;
                 padding-left: .5rem;
             }
         }
