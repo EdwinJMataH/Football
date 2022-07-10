@@ -1,0 +1,25 @@
+@use 'base/variables' as var;
+
+.information__content__tables {
+    flex-direction: column;
+
+    table {
+        margin-bottom: 1rem;
+
+        tbody {
+
+            tr:nth-child(1),
+            tr:nth-child(2),
+            tr:nth-child(3),
+            tr:nth-child(4) {
+                border-left: 0rem;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    
+}

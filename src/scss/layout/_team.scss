@@ -2,6 +2,68 @@
 
 .section__team {
     display: grid;
-    grid-template-columns: 22% 53% 23%;
+    grid-template-columns: 25% 53% 22%;
     gap: 2rem;
+}
+
+.information__content--modified {
+    flex-direction: column;
+}
+
+.matches__content {
+    margin-bottom: 2rem;
+    width: 100%;
+    font-size: 1.3rem;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 20% 40% 40%;
+    grid-template-areas: 
+        "n1 n1"
+        "n2 n3"
+        "n2 n3";
+
+        :last-child {
+            margin-bottom: 0;
+        }
+
+        .tournament {
+            grid-area: n1;
+        }
+
+        .match {
+            grid-area: n2;
+            display: flex;
+            flex-direction: column;
+            border-right: .2rem solid var.$gray;
+        }
+
+        .date {
+            grid-area: n3;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column; 
+        }
+
+    .rival__content {
+        grid-area: n2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .3rem .5rem 0;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .rival {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        span {
+            font-weight: 500;
+        }
+    }
 }

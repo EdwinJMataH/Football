@@ -834,8 +834,75 @@ header .container__header .logo {
   padding-left: 2rem;
 }
 
+.information__content__tables {
+  flex-direction: column;
+}
+.information__content__tables table {
+  margin-bottom: 1rem;
+}
+.information__content__tables table tbody tr:nth-child(1),
+.information__content__tables table tbody tr:nth-child(2),
+.information__content__tables table tbody tr:nth-child(3),
+.information__content__tables table tbody tr:nth-child(4) {
+  border-left: 0rem;
+}
+.information__content__tables table:last-child {
+  margin-bottom: 0;
+}
+
 .section__team {
   display: grid;
-  grid-template-columns: 22% 53% 23%;
+  grid-template-columns: 25% 53% 22%;
   gap: 2rem;
+}
+
+.information__content--modified {
+  flex-direction: column;
+}
+
+.matches__content {
+  margin-bottom: 2rem;
+  width: 100%;
+  font-size: 1.3rem;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 20% 40% 40%;
+  grid-template-areas: "n1 n1" "n2 n3" "n2 n3";
+}
+.matches__content :last-child {
+  margin-bottom: 0;
+}
+.matches__content .tournament {
+  grid-area: n1;
+}
+.matches__content .match {
+  grid-area: n2;
+  display: flex;
+  flex-direction: column;
+  border-right: 0.2rem solid #F5F5F5;
+}
+.matches__content .date {
+  grid-area: n3;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.matches__content .rival__content {
+  grid-area: n2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0.5rem 0;
+}
+.matches__content .rival__content span {
+  font-weight: 700;
+}
+.matches__content .rival {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.matches__content .rival span {
+  font-weight: 500;
 }
