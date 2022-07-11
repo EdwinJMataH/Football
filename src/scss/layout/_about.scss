@@ -1,0 +1,12 @@
+@use 'base/variables' as var;
+
+.container__about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+
+    p {
+        margin-top: 0;
+        font-size: 1.7rem;
+    }
+}
