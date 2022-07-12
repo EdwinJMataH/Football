@@ -1,4 +1,5 @@
 @use 'base/variables' as var;
+@use 'base/mixins' as mix;
 
 .top {
     background-color: var.$gray;
@@ -6,20 +7,17 @@
 }
 
 .contact__information {
-    display: flex;
-    justify-content: space-between;
+    @include mix.flexOrientation(0, space-between, normal);
     padding: 0rem 0;
 
     .contact__items {
-        display: flex;
-        gap: 2rem;
+        @include mix.flex(2rem);
     }
 }
 
 .contact__item {
+    @include mix.flex(1rem);
     color: var.$red;
-    display: flex;
-    gap: 1rem;
     font-size: 2.5rem;
 
     i {

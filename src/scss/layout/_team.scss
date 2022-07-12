@@ -1,9 +1,9 @@
 @use 'base/variables' as var;
+@use 'base/mixins' as mix;
 
 .section__team {
-    display: grid;
-    grid-template-columns: 25% 53% 22%;
-    gap: 2rem;
+    @include mix.grid(2rem, 0);
+    grid-template-columns: 25% 50% 25%;
 }
 
 .information__content--modified {
@@ -22,34 +22,32 @@
         "n2 n3"
         "n2 n3";
 
-        :last-child {
-            margin-bottom: 0;
-        }
+    :last-child {
+        margin-bottom: 0;
+    }
 
-        .tournament {
-            grid-area: n1;
-        }
+    .tournament {
+        grid-area: n1;
+    }
 
-        .match {
-            grid-area: n2;
-            display: flex;
-            flex-direction: column;
-            border-right: .2rem solid var.$gray;
-        }
+    .match {
+        grid-area: n2;
+        display: flex;
+        flex-direction: column;
+        border-right: .2rem solid var.$gray;
+    }
 
-        .date {
-            grid-area: n3;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            flex-direction: column; 
-        }
+    .date {
+        grid-area: n3;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column; 
+    }
 
     .rival__content {
         grid-area: n2;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include mix.flexOrientation(0, space-between, center);
         padding: .3rem .5rem 0;
 
         span {
@@ -58,9 +56,7 @@
     }
 
     .rival {
-        display: flex;
-        align-items: center;
-        gap: .5rem;
+        @include mix.flexOrientation(0.5rem, flex-start, center);
 
         span {
             font-weight: 500;

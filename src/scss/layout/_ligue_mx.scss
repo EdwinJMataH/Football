@@ -1,9 +1,8 @@
 @use 'base/variables' as var;
+@use 'base/mixins' as mix;
 
 .section__ligue_mx {
-    display: grid;
-    grid-template-columns: 45% 55%;
-    gap: 3rem;
+    @include mix.grid(3rem, 2);
 }
 
 .information__content {

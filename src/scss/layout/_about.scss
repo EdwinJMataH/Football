@@ -1,9 +1,8 @@
 @use 'base/variables' as var;
+@use 'base/mixins' as mix;
 
 .container__about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
+    @include mix.grid(5rem, 2);
 
     p {
         margin-top: 0;

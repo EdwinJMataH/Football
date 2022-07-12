@@ -1,8 +1,8 @@
 @use 'base/variables' as var;
+@use 'base/mixins' as mix;
 
 .container__footer {
-    display: flex;
-    justify-content: space-between;
+    @include mix.flexOrientation(0, space-between, normal);
     padding: 1rem 0;
 
     p {

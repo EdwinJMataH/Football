@@ -1,45 +1,44 @@
 @use 'base/variables' as var;
+@use 'base/mixins' as mix;
 
 .second__header {
     background-color: var.$white;
     padding: 3rem 0;
+}
 
+.container__name {
+    @include mix.flex(1rem);
+    padding: 3rem 0;
+    position: relative;
 
-    .container__name {
-        padding: 3rem 0;
-        position: relative;
-        display: flex;
+    img {
+        height: 5rem;
+        width: 5rem;
+    }
 
-        img {
-            height: 5rem;
-            width: 5rem;
-            margin-right: 1.5rem;
-        }
+    h1 {
+        font-size: 4rem;
+    }
 
-        h1 {
-            font-size: 4rem;
-        }
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        height: .5rem;
+        width: 10rem;
+        background-color: var.$green;
+        z-index: 1;
+    }
 
-        &:after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "";
-            height: .5rem;
-            width: 10rem;
-            background-color: var.$green;
-            z-index: 1;
-        }
-
-        &:before {
-            position: absolute;
-            top: 0;
-            left: 12rem;
-            content: "";
-            height: .5rem;
-            width: 10rem;
-            background-color: var.$red;
-            z-index: 1;
-        }
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 12rem;
+        content: "";
+        height: .5rem;
+        width: 10rem;
+        background-color: var.$red;
+        z-index: 1;
     }
 }

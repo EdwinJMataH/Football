@@ -359,6 +359,10 @@ ul li {
   margin: 0 auto;
 }
 
+.container__main {
+  margin-top: 2rem;
+}
+
 .btn {
   display: block;
   padding: 1rem;
@@ -367,6 +371,7 @@ ul li {
   color: #FFFFFF;
   font-size: 1.8rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .top {
@@ -376,7 +381,9 @@ ul li {
 
 .contact__information {
   display: flex;
+  gap: 0;
   justify-content: space-between;
+  align-items: normal;
   padding: 0rem 0;
 }
 .contact__information .contact__items {
@@ -385,9 +392,9 @@ ul li {
 }
 
 .contact__item {
-  color: #E90E16;
   display: flex;
   gap: 1rem;
+  color: #E90E16;
   font-size: 2.5rem;
 }
 .contact__item i {
@@ -428,11 +435,12 @@ header h1 {
 header h1 :nth-child(1) {
   color: #008000;
 }
-header h1 span {
+header h1 :nth-child(2) {
   color: #FFFFFF;
 }
 header .container__header {
   display: flex;
+  gap: 0;
   justify-content: space-between;
   align-items: center;
   height: 8rem;
@@ -440,41 +448,44 @@ header .container__header {
 header .container__header .logo {
   flex: 1;
 }
-
-.navegation {
+header .container__header .navegation {
   flex: 3;
 }
-.navegation .navegation__list {
+
+.navegation__list {
   display: flex;
+  gap: 0;
   justify-content: space-between;
   align-items: center;
 }
-.navegation .navegation__list .navegation__item {
+.navegation__list .navegation__item {
   position: relative;
 }
-.navegation .navegation__list .navegation__item:hover .dropdown {
+.navegation__list .navegation__item:hover .dropdown {
   opacity: 1;
   pointer-events: auto;
 }
-.navegation .navegation__list .navegation__item a {
+
+.navegation__item a {
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+  align-items: center;
   color: #FFFFFF;
   padding: 3rem 2.8rem;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   font-size: 1.6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   transition: 0.5s;
 }
-.navegation .navegation__list .navegation__item a i {
+.navegation__item a i {
   margin-left: 1rem;
 }
-.navegation .navegation__list .navegation__item a:hover {
+.navegation__item a:hover {
   background-color: #E90E16;
 }
-.navegation .navegation__list .navegation__item a:hover i {
+.navegation__item a:hover i {
   transform: rotate(180deg);
 }
 
@@ -496,97 +507,93 @@ header .container__header .logo {
   max-height: 50rem;
 }
 
-.container__main {
-  margin-top: 2rem;
-}
-
 .container__news {
   display: grid;
-  grid-template-columns: 22% 55% 23%;
   gap: 2rem;
+  grid-template-columns: repeat(0, 1fr);
+  grid-template-columns: 25% 50% 25%;
 }
 
-.sidebar .information {
+.information {
   border-radius: 1rem;
   background-color: #FFFFFF;
   padding: 2rem;
   margin-bottom: 2rem;
 }
-.sidebar .information .information__title {
+.information .information__title {
   border-bottom: 0.2rem solid #212529;
   margin-bottom: 1rem;
 }
-.sidebar .information .information__title h2, .sidebar .information .information__title h4 {
+.information .information__title h2, .information .information__title h4 {
   margin-bottom: 1rem;
 }
-.sidebar .information .information__title h2 {
+.information .information__title h2 {
   font-size: 3rem;
 }
-.sidebar .information .information__content {
+.information .information__content {
   display: flex;
+  gap: 0;
+  justify-content: flex-start;
   align-items: center;
   padding: 1rem 0 0.5rem;
   border-bottom: 0.2rem solid #F5F5F5;
 }
-.sidebar .information .information__content img {
+.information .information__content img {
   height: 3rem;
   width: 3rem;
 }
-.sidebar .information .information__content a {
+.information .information__content a {
   color: #212529;
   padding-left: 0.5rem;
 }
-.sidebar .information .information_fun__content {
+.information .information_fun__content {
   border-bottom: 0.2rem solid #F5F5F5;
   padding: 1rem 0;
 }
-.sidebar .information .information_fun__content h4 {
+.information .information_fun__content h4 {
   color: #212529;
 }
-.sidebar .information .information_fun__content img {
+.information .information_fun__content img {
   border-radius: 0.5rem;
   padding-bottom: 0.3rem;
 }
 
-.sidebar__central .news__central {
+.news__central {
   border-radius: 1rem;
   background-color: #FFFFFF;
   padding: 1.5rem;
   margin-bottom: 2rem;
 }
-.sidebar__central .central__tittle {
+
+.central__tittle {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
 }
-.sidebar__central .central__tittle img {
-  height: 4rem;
-  width: 4rem;
+.central__tittle h4 {
+  margin-bottom: 0.8rem;
 }
-.sidebar__central .central__tittle h4 {
-  margin-bottom: 0.5rem;
-}
-.sidebar__central .central__information .central__image {
+
+.central__information .central__image {
   width: 100%;
   height: 25rem;
   overflow: hidden;
 }
-.sidebar__central .central__information .central__image img {
+.central__information .central__image img {
   border-radius: 0.5rem 0.5rem 0rem 0rem;
   height: 100%;
 }
-.sidebar__central .central__information .central__content {
+.central__information .central__content {
   padding: 0 1rem;
-  border-left: 0.2rem solid #F5F5F5;
-  border-bottom: 0.2rem solid #F5F5F5;
-  border-right: 0.2rem solid #F5F5F5;
+  border: 0.2rem solid #F5F5F5;
+  border-top: 0;
   border-radius: 0 0 0.5rem 0.5rem;
 }
-.sidebar__central .central__information .central__content h2 {
+.central__information .central__content h2 {
   color: #212529;
   padding-top: 0.5rem;
 }
-.sidebar__central .central__information .central__content p {
+.central__information .central__content p {
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
@@ -604,50 +611,53 @@ header .container__header .logo {
 .container__information p {
   font-size: 1.8rem;
 }
-.container__information .information {
+
+.information__banner {
   display: grid;
+  gap: 0;
+  grid-template-columns: repeat(0, 1fr);
   grid-template-columns: 65% 35%;
 }
-.container__information .information .container__contact__links {
+.information__banner .container__contact__links {
   display: flex;
   gap: 15rem;
   padding: 5rem 0 8rem;
 }
-.container__information .information .contact__social {
+.information__banner .contact__social {
   margin-top: 2rem;
 }
-.container__information .information .contact__social a:hover {
+.information__banner .contact__social a:hover {
   background-color: #212529;
   border-color: #FFFFFF;
 }
-.container__information .information .container__links a:before {
+.information__banner .container__links a:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f105";
   padding-right: 0.5rem;
 }
-.container__information .information .container__links a:hover {
+.information__banner .container__links a:hover {
   color: #E90E16;
 }
-.container__information .information .container__links a:hover:before {
+.information__banner .container__links a:hover:before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f101";
 }
-.container__information .information .container__links .contact__item {
+.information__banner .container__links .contact__item {
   padding-left: 2rem;
 }
-.container__information .information .container__subscribe {
+.information__banner .container__subscribe {
   background-color: #E90E16;
   padding: 10rem 3rem 5rem;
 }
-.container__information .information .container__subscribe h2, .container__information .information .container__subscribe p {
+.information__banner .container__subscribe h2, .information__banner .container__subscribe p {
   padding-left: 2rem;
 }
-.container__information .information .container__subscribe p {
+.information__banner .container__subscribe p {
   margin-bottom: 5rem;
 }
-.container__information .information .container__subscribe input[type=text] {
+.information__banner .container__subscribe input[type=text] {
   background-color: #F5F5F5;
   padding: 1.2rem 0 1.2rem 1.2rem;
   border-radius: 0.5rem 0 0 0.5rem;
@@ -655,21 +665,24 @@ header .container__header .logo {
   border-right: 0;
   width: 100%;
 }
-.container__information .information .container__subscribe input[type=submit] {
+.information__banner .container__subscribe input[type=submit] {
   background-color: #212529;
   color: #FFFFFF;
   border-radius: 0 0.5rem 0.5rem 0;
   border-color: #E90E16;
   border-left: 0;
+  cursor: pointer;
 }
-.container__information .information .container__subscribe .input__group {
+.information__banner .container__subscribe .input__group {
   display: flex;
-  align-items: stretch;
+  gap: 0;
 }
 
 .container__footer {
   display: flex;
+  gap: 0;
   justify-content: space-between;
+  align-items: normal;
   padding: 1rem 0;
 }
 .container__footer p {
@@ -684,20 +697,21 @@ header .container__header .logo {
   background-color: #FFFFFF;
   padding: 3rem 0;
 }
-.second__header .container__name {
+
+.container__name {
+  display: flex;
+  gap: 1rem;
   padding: 3rem 0;
   position: relative;
-  display: flex;
 }
-.second__header .container__name img {
+.container__name img {
   height: 5rem;
   width: 5rem;
-  margin-right: 1.5rem;
 }
-.second__header .container__name h1 {
+.container__name h1 {
   font-size: 4rem;
 }
-.second__header .container__name:after {
+.container__name:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -707,7 +721,7 @@ header .container__header .logo {
   background-color: #008000;
   z-index: 1;
 }
-.second__header .container__name:before {
+.container__name:before {
   position: absolute;
   top: 0;
   left: 12rem;
@@ -720,22 +734,25 @@ header .container__header .logo {
 
 .section__teams {
   display: grid;
-  grid-template-columns: 78% 22%;
   gap: 3rem;
+  grid-template-columns: repeat(0, 1fr);
+  grid-template-columns: 75% 25%;
 }
 
 .container__teams {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
   border-radius: 1rem;
   background-color: #FFFFFF;
   padding: 1.5rem;
   margin-bottom: 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
 }
 
 .team {
   display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
   align-items: center;
   padding: 1rem 0 0.5rem 1rem;
   border-bottom: 0.2rem solid #F5F5F5;
@@ -747,7 +764,6 @@ header .container__header .logo {
 .team a {
   color: #212529;
   font-size: 1.8rem;
-  padding-left: 2rem;
   font-weight: 500;
 }
 .team a:hover {
@@ -756,8 +772,8 @@ header .container__header .logo {
 
 .section__ligue_mx {
   display: grid;
-  grid-template-columns: 45% 55%;
   gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .information__content table {
@@ -834,6 +850,12 @@ header .container__header .logo {
   padding-left: 2rem;
 }
 
+.section__cup_mx {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .information__content__tables {
   flex-direction: column;
 }
@@ -846,14 +868,18 @@ header .container__header .logo {
 .information__content__tables table tbody tr:nth-child(4) {
   border-left: 0rem;
 }
+.information__content__tables table tbody tr td:nth-child(2) {
+  width: 12rem;
+}
 .information__content__tables table:last-child {
   margin-bottom: 0;
 }
 
 .section__team {
   display: grid;
-  grid-template-columns: 25% 53% 22%;
   gap: 2rem;
+  grid-template-columns: repeat(0, 1fr);
+  grid-template-columns: 25% 50% 25%;
 }
 
 .information__content--modified {
@@ -891,6 +917,7 @@ header .container__header .logo {
 .matches__content .rival__content {
   grid-area: n2;
   display: flex;
+  gap: 0;
   justify-content: space-between;
   align-items: center;
   padding: 0.3rem 0.5rem 0;
@@ -900,8 +927,9 @@ header .container__header .logo {
 }
 .matches__content .rival {
   display: flex;
-  align-items: center;
   gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
 }
 .matches__content .rival span {
   font-weight: 500;
@@ -914,8 +942,8 @@ header .container__header .logo {
 
 .container__access {
   display: grid;
-  grid-template-columns: 50% 50%;
-  column-gap: 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 .container__access fieldset {
   padding: 0;
@@ -925,10 +953,10 @@ header .container__header .logo {
 
 .container__inputs {
   display: grid;
-  grid-template-columns: 50% 50%;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
   padding: 2rem;
   width: 100%;
-  column-gap: 1rem;
 }
 .container__inputs .inputs {
   font-size: 1.5rem;
@@ -951,8 +979,8 @@ header .container__header .logo {
 
 .container__contacts {
   display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 1rem;
 }
 .container__contacts fieldset {
   padding: 0;
@@ -971,8 +999,8 @@ header .container__header .logo {
 
 .container__about {
   display: grid;
+  gap: 5rem;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 5rem;
 }
 .container__about p {
   margin-top: 0;

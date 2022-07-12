@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Football MX</title>
-    <link rel="icon" href="icono-pestana.png">
+    <link rel="icon" href="build/img/icono-pestana.webp">
     <script src="https://kit.fontawesome.com/32a2f3d096.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="build/css/app.css">
 </head>
@@ -56,8 +56,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="navegation__item"><a href="">Contact</a></li>
-                    <li class="navegation__item"><a href="">About us</a></li>
+                    <li class="navegation__item"><a href="contact.html">Contact</a></li>
+                    <li class="navegation__item"><a href="about.html">About us</a></li>
                 </ul>
             </nav>
         </div> <!-- container__header -->
@@ -289,7 +289,7 @@
     </main> <!-- container__main -->
 
     <section class="container__information">
-        <div class="information container">
+        <div class="information__banner container">
             <div class="container__contact__links">
                 <div class="container__contact">
                     <h2>Get In Touch</h2>
@@ -311,21 +311,20 @@
                         <a href="#" class="item__social"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#" class="item__social"><i class="fab fa-instagram"></i></a>
                     </div> <!-- contact__social -->
-                </div>
+                </div> <!-- container__contact -->
                 <div class="container__links">
                     <h2>Quick Links</h2>
                     <div class="contact__item">
-                        <p><a href="">About Us</a></p>
+                        <p><a href="about.html">About Us</a></p>
                     </div>
                     <div class="contact__item">
-                        <p><a href="">Contact</a></p>
+                        <p><a href="contact.html">Contact</a></p>
                     </div>
                     <div class="contact__item">
-                        <p><a href="">Login / Register</a></p>
+                        <p><a href="login.html">Login / Register</a></p>
                     </div>
-    
-                </div>
-            </div>
+                </div> <!-- container__links -->
+            </div> <!-- container__contact__links -->
 
             <div class="container__subscribe">
                 <div class="newlester">
@@ -333,14 +332,14 @@
                     <p>Subscribe Our Newsletter</p>
                     <form action="">
                         <div class="input__group">
-                            <input type="text" name="" id="" placeholder="Your Email">
+                            <input type="text" name="sendEmail" id="sendEmail" placeholder="Your Email">
                             <input type="submit" value="Sing Up">
                         </div>
                     </form>
-
-                </div>
-            </div>
-    </section> <!-- container__contact -->
+                </div> <!-- newlester -->
+            </div> <!-- container__subscribe -->
+        </div> <!-- information container -->
+    </section> <!-- container__information -->
 
     <footer>
         <div class="container container__footer">

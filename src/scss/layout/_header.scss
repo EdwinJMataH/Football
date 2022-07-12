@@ -1,4 +1,5 @@
 @use 'base/variables' as var;
+@use 'base/mixins' as mix;
 
 header {
     background-color: var.$black;
@@ -13,67 +14,62 @@ header {
             color: var.$green;
         }
 
-        span {
+        :nth-child(2) {
             color: var.$white;
         }
     }
 
     .container__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include mix.flexOrientation(0, space-between, center);
         height: 8rem;
 
         .logo {
             flex: 1;
         }
 
+        .navegation {
+            flex: 3;
+        }   
+    }
+}  
+
+.navegation__list {
+    @include mix.flexOrientation(0, space-between, center);
+
+    .navegation__item {
+        position: relative;
+
+        &:hover {
+
+            .dropdown {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
     }
 }
 
-.navegation {
-    flex: 3;
+.navegation__item {
 
-    .navegation__list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    a {
+        @include mix.flexOrientation(0, space-between, center);
+        color: var.$white;
+        padding: 3rem 2.8rem;
+        text-transform: uppercase;
+        font-family: var.$font_title;
+        font-weight: 600;
+        font-size: 1.6rem;
+        transition: .5s;
 
-        .navegation__item {
-            position: relative;
-
-            &:hover {
-
-                .dropdown {
-                    // transform: translate(0,0);
-                    opacity: 1;
-                    pointer-events: auto;
-                }
-            }
+        i {
+            margin-left: 1rem;
         }
 
-        .navegation__item a{
-            color: var.$white;
-            padding: 3rem 2.8rem;
-            text-transform: uppercase;
-            font-family: var.$font_title;
-            font-weight: 600;
-            font-size: 1.6rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: .5s;
+        &:hover {
+            background-color: var.$red;
 
             i {
-                margin-left: 1rem;
-            }
-
-            &:hover {
-                background-color: var.$red;
-
-                i {
-                    transform: rotate(180deg);
-                }
+                transform: rotate(180deg);
             }
         }
     }

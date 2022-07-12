@@ -1,9 +1,8 @@
 @use 'base/variables' as vas;
+@use 'base/mixins' as mix;
 
 .container__contacts {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 1rem;
+    @include mix.grid(1rem, 3);
 
     fieldset {
         padding: 0;

@@ -1,24 +1,21 @@
 @use 'base/variables' as var;
+@use 'base/mixins' as mix;
 
 .section__teams {
-    display: grid;
-    grid-template-columns: 78% 22%;
-    gap: 3rem;
+    @include mix.grid(3rem, 0);
+    grid-template-columns: 75% 25%;
 }
 
 .container__teams {
+    @include mix.grid(2rem, 2);
     border-radius: 1rem;
     background-color: var.$white;
     padding: 1.5rem;
     margin-bottom: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
 }
 
 .team {
-    display: flex;
-    align-items: center;
+    @include mix.flexOrientation(1rem, flex-start, center);
     padding: 1rem 0 .5rem 1rem;
     border-bottom: .2rem solid var.$gray;
 
@@ -31,12 +28,10 @@
     a {
         color: var.$black;
         font-size: 1.8rem;
-        padding-left: 2rem;
         font-weight: 500;
 
         &:hover {
             color: var.$red;
         }
     }
-
 }

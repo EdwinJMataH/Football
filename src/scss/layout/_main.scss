@@ -1,126 +1,105 @@
 @use 'base/variables' as var;
-
-.container__main {
-    margin-top: 2rem;
-}
-
-
+@use 'base/mixins' as mix;
 
 .container__news {
-    display: grid;
-    grid-template-columns: 22% 55% 23%;
-    gap: 2rem;
-
+    @include mix.grid(2rem, 0);
+    grid-template-columns: 25% 50% 25%;
 }
 
-.sidebar {
+.information {
+    border-radius: 1rem;
+    background-color: var.$white;
+    padding: 2rem;
+    margin-bottom: 2rem;
 
-    .information {
-        border-radius: 1rem;
-        background-color: var.$white;
-        padding: 2rem;
-        margin-bottom: 2rem;
-
-        .information__title {
-            border-bottom: .2rem solid var.$black;
-            margin-bottom: 1rem;
-
-            h2, h4{
-                margin-bottom: 1rem;
-            }
-
-            h2 {
-                font-size: 3rem;
-            }
-        }
-        .information__content {
-            display: flex;
-            align-items: center;
-            padding: 1rem 0 .5rem;
-            border-bottom: .2rem solid var.$gray;
-    
-            img {
-                height: 3rem;
-                width: 3rem;
-            }
-
-            a {
-                color: var.$black;
-                // font-size: 1.5rem;
-                padding-left: .5rem;
-            }
-        }
-
-        .information_fun__content {
-            border-bottom: .2rem solid var.$gray;
-            padding: 1rem 0;
-
-            h4 {
-                color: var.$black;            
-            }
-
-            img {
-                border-radius: .5rem;
-                padding-bottom: .3rem;
-            }
-        }
-    }
-}
-
-.sidebar__central {
-
-    .news__central {
-        border-radius: 1rem;
-        background-color: var.$white;
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-
-    }
-
-    .central__tittle {
-        display: flex;
-        gap: 1rem;
+    .information__title {
+        border-bottom: .2rem solid var.$black;
         margin-bottom: 1rem;
 
-        img {
-            height: 4rem;
-            width: 4rem;
+        h2, h4{
+            margin-bottom: 1rem;
         }
 
-        h4 {
-            margin-bottom: 0.5rem;
+        h2 {
+            font-size: 3rem;
         }
     }
 
-    .central__information {
+    .information__content {
+        @include mix.flexOrientation(0, flex-start, center);
+        padding: 1rem 0 .5rem;
+        border-bottom: .2rem solid var.$gray;
 
-        .central__image {
-            width: 100%;
-            height: 25rem;
-            overflow: hidden;
-    
-            img {
-                border-radius: .5rem .5rem 0rem 0rem;
-                height: 100%;
-            }
+        img {
+            height: 3rem;
+            width: 3rem;
         }
 
-        .central__content {
-            padding: 0 1rem;
-            border-left: 0.2rem solid var.$gray;
-            border-bottom: 0.2rem solid var.$gray;
-            border-right: 0.2rem solid var.$gray;
-            border-radius: 0 0 .5rem .5rem;
+        a {
+            color: var.$black;
+            padding-left: .5rem;
+        }
+    }
 
-            h2 {
-                color: var.$black;
-                padding-top: 0.5rem;
-            }
-    
-            p {
-                font-size: 1.5rem;
-                line-height: 2.5rem;
-            }
+    .information_fun__content {
+        border-bottom: .2rem solid var.$gray;
+        padding: 1rem 0;
+
+        h4 {
+            color: var.$black;            
+        }
+
+        img {
+            border-radius: .5rem;
+            padding-bottom: .3rem;
+        }
+    }
+}
+
+
+.news__central {
+    border-radius: 1rem;
+    background-color: var.$white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.central__tittle {
+    @include mix.flex(1rem);
+    margin-bottom: 1rem;
+
+    h4 {
+        margin-bottom: 0.8rem;
+    }
+}
+
+.central__information {
+
+    .central__image {
+        width: 100%;
+        height: 25rem;
+        overflow: hidden;
+
+        img {
+            border-radius: .5rem .5rem 0rem 0rem;
+            height: 100%;
+        }
+    }
+
+    .central__content {
+        padding: 0 1rem;
+        border: 0.2rem solid var.$gray;
+        border-top: 0;
+        border-radius: 0 0 .5rem .5rem;
+
+        h2 {
+            color: var.$black;
+            padding-top: 0.5rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
         }
     }
 }
