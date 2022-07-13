@@ -4,6 +4,11 @@
 .top {
     background-color: var.$gray;
     padding: 2rem 0;
+    display: none;
+
+    @include mix.desktop {
+        display: block;
+    }
 }
 
 .contact__information {

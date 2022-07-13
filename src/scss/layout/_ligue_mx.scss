@@ -2,7 +2,11 @@
 @use 'base/mixins' as mix;
 
 .section__ligue_mx {
-    @include mix.grid(3rem, 2);
+    @include mix.grid(3rem, 1);
+
+    @include mix.desktop {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .information__content {
@@ -15,7 +19,10 @@
         border-collapse: collapse;
 
         td {
-            padding: 1rem ;
+            padding: 0.5rem;
+            @include mix.tablet {
+                padding: 1rem;
+            }
 
             a {
                 padding-left: 0!important;

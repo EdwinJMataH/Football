@@ -2,7 +2,12 @@
 @use 'base/mixins' as mix;
 
 .container__about {
-    @include mix.grid(5rem, 2);
+    @include mix.grid(3rem, 1);
+
+    @include mix.desktop {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
 
     p {
         margin-top: 0;

@@ -2,13 +2,18 @@
 @use 'base/mixins' as mix;
 
 .section__cup_mx {
-    @include mix.grid(3rem, 2);
+    @include mix.grid(3rem, 1);
+
+    @include mix.desktop {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .information__content__tables {
     flex-direction: column;
 
     table {
+        width: 100%;
         margin-bottom: 1rem;
 
         tbody {

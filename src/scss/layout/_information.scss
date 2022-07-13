@@ -19,13 +19,20 @@
 }
 
 .information__banner {
+    @include mix.grid(0, 1);
 
-    @include mix.grid(0, 0);
-    grid-template-columns: 65% 35%;
+    @include mix.desktop {
+        grid-template-columns: 65% 35%;
+    }
 
     .container__contact__links {
         @include mix.flex(15rem);
+        flex-direction: column;
         padding: 5rem 0 8rem;
+
+        @include mix.tablet {
+            flex-direction: row;
+        }
     }
 
     .contact__social {

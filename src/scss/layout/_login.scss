@@ -7,7 +7,11 @@
 }
 
 .container__access {
-    @include mix.grid(1rem, 2);
+    @include mix.grid(1rem, 1);
+
+    @include mix.desktop {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     fieldset {
         padding: 0;
@@ -17,7 +21,13 @@
 }
 
 .container__inputs {
-    @include mix.grid(1rem, 2);
+    @include mix.grid(1rem, 1);
+
+    @include mix.tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
     padding: 2rem;
     width: 100%;
 

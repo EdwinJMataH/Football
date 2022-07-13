@@ -2,8 +2,14 @@
 @use 'base/mixins' as mix;
 
 .container__footer {
-    @include mix.flexOrientation(0, space-between, normal);
+    @include mix.flexOrientation(0, center, center);
+    flex-direction: column;
     padding: 1rem 0;
+
+    @include mix.desktop {
+        @include mix.flexOrientation(0, space-between, normal);
+        flex-direction: row;
+    }
 
     p {
         font-size: 1.6rem;

@@ -2,16 +2,23 @@
 @use 'base/mixins' as mix;
 
 .section__teams {
-    @include mix.grid(3rem, 0);
-    grid-template-columns: 75% 25%;
+    @include mix.grid(3rem, 1);
+
+    @include mix.desktop {
+        grid-template-columns: 75% 25%;
+    }
 }
 
 .container__teams {
-    @include mix.grid(2rem, 2);
+    @include mix.grid(0rem, 1);
     border-radius: 1rem;
     background-color: var.$white;
     padding: 1.5rem;
     margin-bottom: 2rem;
+
+    @include mix.desktop {
+        @include mix.grid(2rem, 2);
+    }
 }
 
 .team {
